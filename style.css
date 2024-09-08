@@ -218,6 +218,10 @@ legend {
   animation: slide 20s linear infinite;
 }
 
+.slider-items:hover {
+  animation-play-state: paused;
+}
+
 .slider-items img {
   width: 250px;
 }
