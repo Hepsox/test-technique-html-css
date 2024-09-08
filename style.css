@@ -19,6 +19,10 @@
   --text-content: 1.1rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -99,11 +103,15 @@ legend {
 }
 
 .nav-links a:visited {
-  color: var(--text-color);
+  color: var(--text-color) !important;
 }
 
 .nav-links {
   display: none;
+}
+
+.nav-links a {
+  padding: 20px;
 }
 
 .navbar .menu-burger {
@@ -203,7 +211,7 @@ legend {
   display: flex;
   align-items: center;
   gap: 20px;
-  animation: slide 10s linear infinite;
+  animation: slide 20s linear infinite;
 }
 
 .slider-items img {
