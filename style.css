@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #913001;
+  --secondary-color: #3b5753;
+  --background-light: #f9f9f9;
+  --color-light: #ffffff;
+  --text-color: #000000;
+  --spacing-section: 80px;
+  --title-primary: 2rem;
+  --title-secondary: 1.5rem;
+  --text-content: 1.1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Global styles */
+
+h1 {
+  font-size: var(--title-primary);
+}
+
+h2 {
+  font-size: var(--title-primary);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: var(--title-secondary);
+  font-weight: 600;
+}
+
+p {
+  font-size: var(--text-content);
+  font-weight: 400;
+}
+
+.section {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.more-info {
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+  color: var(--color-light);
+  padding: 14px 18px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.more-info:hover {
+  transform: scale(0.95);
+}
+
+legend {
+  margin-bottom: 10px;
+}
+
+/* header */
+.header-section {
+  background-color: var(--color-light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-section img {
+  width: 100px;
+}
+
+.nav-links a:visited {
+  color: var(--text-color);
+}
+
+.nav-links {
+  display: none;
+}
+
+.navbar .menu-burger {
+  display: block;
+  font-size: 30px;
+  padding: 30px 0 30px 30px;
+  cursor: pointer;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(assets/artisan-charpente-bordeaux.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  color: var(--color-light);
+}
+
+/* about section */
+.about-section img {
+  margin-top: 50px;
+}
+
+.about-section h2 {
+  color: var(--text-color);
+  font-size: var(--title-primary);
+}
+
+.about-section p {
+  color: var(--text-color);
+  margin-bottom: 50px;
+  line-height: 1.7;
+}
+
+/* expertise section */
+.expertises-section {
+  background-color: var(--background-light);
+}
+
+.expertises-section h3,
+.expertises-section h2 {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0;
+  background-color: var(--color-light);
+  padding-bottom: 30px;
+}
+
+.expertise-card p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.expertise-card-body {
+  padding: 20px;
+}
+
+/* service section */
+.services-section {
+  background-color: var(--primary-color);
+  color: var(--color-light);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+}
+
+.services-section .service span {
+  font-size: var(--text-content);
+  padding-left: 15px;
+}
+
+.realisations-section {
+  margin-top: 150px;
+  overflow: hidden;
+}
+
+.slider-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: slide 10s linear infinite;
+}
+
+.slider-items img {
+  width: 250px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(calc(-270px * 5));
+  }
+}
+
+/* contact section */
+.contact-address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.contact-address i {
+  color: var(--secondary-color);
+  margin-right: 5px;
+}
+.contact-address a {
+  color: var(--text-color);
+}
+.contact-content h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nature-projet {
+  border: none;
+  padding: 0;
+}
+
+.checkbox-group {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+/* footer */
+.footer-section {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  color: var(--color-light);
+  padding: 30px 0;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  .header-section {
+    display: flex;
+  }
+
+  .header-content {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar .menu-burger {
+    display: none;
+  }
+
+  .nav-links .active {
+    color: var(--primary-color);
+  }
+
+  .hero-container {
+    height: 50vh;
+  }
+
+  .hero-container h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-container p {
+    font-size: 2.1rem;
+  }
+
+  .about-section .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .about-content {
+    width: 60%;
+    padding: 50px;
+  }
+
+  .expertise-cards {
+    display: flex;
+    gap: 40px;
+  }
+
+  .services-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .services-section span {
+    font-size: 1.3rem;
+    padding: 10px 0;
+  }
+
+  .services-section .service {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .slider-items img {
+    width: 550px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(calc(-570px * 5));
+    }
+  }
+
+  .contact-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-content {
+    width: 50%;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+
+  .contact-form .form-line {
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact-form .form-line .form-group {
+    width: 50%;
+  }
+
+  .checkboxes {
+    display: flex;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-links.open {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+  }
+
+  .nav-links.open ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: var(--color-light);
+    padding: 10px;
+  }
+}
