@@ -50,6 +50,10 @@ p {
   font-weight: 400;
 }
 
+a {
+  color: var(--text-color);
+}
+
 .section {
   padding-top: var(--spacing-section);
   padding-bottom: var(--spacing-section);
