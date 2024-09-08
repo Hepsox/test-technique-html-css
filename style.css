@@ -107,7 +107,7 @@ legend {
 }
 
 .nav-links a:visited {
-  color: var(--text-color) !important;
+  color: var(--text-color);
 }
 
 .nav-links {
